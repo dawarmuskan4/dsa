@@ -1,7 +1,111 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
 
+/*int power(int a, int b){
+  int ans = 1;
+  for(int i =1; i<=b; i++){
+    ans = ans * a;
+  }
+  return ans;
+}*/
+
+/*bool isEven(int a){
+  if(a&1){
+    return 0;
+  }
+  return 1;
+} */
+
+/*int factorial(int n){
+  int fact = 1;
+  for(int i=1; i<=n; i++){
+    fact = fact * i;
+  }
+  return fact;
+} */
+
+/*int nCr(int n, int r){2
+  int num = factorial(n);
+  int den = factorial(r) * factorial(n-r);
+
+  int ans = num / den;
+  return ans;
+}*/
+
+/*bool isPrime(int n){
+  for(int i=2; i<n; i++){
+    if(n%i==0){
+      return 0;
+    }
+  }
+  return 1;
+}*/
+
+/*int fib(int n){
+  int sum = 0;
+  for(int i=0;i<=n;i++){
+    sum = sum + i;
+  }
+  return sum;
+}*/
+
+/*int ap(int n){
+  int ans=1;
+  for(int i=1;i<=n;i++){
+    ans = 3*n + 7;
+  }
+  return ans;
+}*/
+
+/*int decToBin(int n){
+  int ans = 0, i = 0;
+  while (n != 0){
+    int bit = n & 1;
+    ans = (bit * pow(10, i)) + ans;
+    n = n >> 1;
+    i++;
+  }
+  int sum = 0;
+  if(ans&1){
+    sum = sum+1;
+  }
+  return sum;
+}*/
+
+/*Count no of 1's in binary number for 2 numbers
+int bit(int a){
+  int count = 0;
+  while(a!=0){
+    if(a&1){
+      count += 1;
+    }
+    a=a>>1;
+  }
+  return count;
+}
+
+int count(int a,int b){
+  int c = bit(a)+bit(b);
+  return c;
+} */
+
+/*Pass by value
+void dummy(int n){
+  n++;
+  cout << "n is " << n << endl;
+}*/
+
+
 int main(){
+
+  /*Pass by value
+  int n;
+  cout << "enter value of n: ";
+  cin >> n;
+
+  dummy(n);
+  cout << "number n is "<<n<<endl;*/
 
   /* this while condition will always be true if exit( is not put.)
   while (1)
@@ -79,4 +183,58 @@ EXUCUTE OUR PART.*/
     amount = amount % 10;
     cout << "No of 10 rupees notes required are " << rs10 << endl;
   }*/
+  
+  /*Functions
+  int a, b;
+  cin >> a >> b;
+  cout << power(a,b) ;
+
+  int num;
+  cout << "Enter value : ";
+  cin >> num;
+  if(isEven(num)){
+    cout << "Number is even" <<endl;
+  }
+  else{
+    cout << "Number is odd" << endl;
+  }*/
+
+  /*int n , r;
+  cout << "Enter the value of n and r ";
+  cin >> n >> r;
+  int ans = nCr(n,r);
+  cout << ans;*/
+
+  /*Prime number
+  int n;
+  cout << "Enter a number: ";
+  cin >> n;
+  if(isPrime(n)){
+    cout << n << " is Prime ";
+  }
+  else{
+    cout << n << " is not Prime";
+  }*/
+
+  /*Fibonnaci series
+  int n;
+  cout << "Enter value for n ";
+  cin >> n;
+  int ans = fib(n);
+  cout << ans;*/
+
+  /*AP
+  int n;
+  cout << "Enter value of n ";
+  cin >> n;
+  int ans = ap(n);
+  cout << ans;*/
+
+  /*Count no of 1's in binary number for 2 numbers
+  int a, b;
+  cout << "Enter value for a and b ";
+  cin >> a >> b;
+  int ans = count(a,b);
+  cout << ans; */
+
 }
