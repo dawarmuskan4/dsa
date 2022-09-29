@@ -63,7 +63,7 @@ void printArray(int arr[], int n){
 }
 
 int main(){
-  //min and max in an array
+  //take an array input
   int size;
   cout << "Enter the size of the array ";
   cin >> size;
