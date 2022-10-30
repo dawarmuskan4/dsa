@@ -45,6 +45,9 @@ int lastOcc(int arr[], int n, int key){
   return ans;
 }  
 
+//find total no of occurences
+// Total occurences = Last Index - First Index + 1
+
 int main(){
   int even[5] = {1,2,3,3,5};
   int first = firstOcc(even, 5, 3) ;
