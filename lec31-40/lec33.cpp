@@ -47,10 +47,41 @@ bool linearSearch(int arr[], int size, int key){
   }
 } 
 
+void printBS(int arr[], int s, int e){
+  for(int i=s; i<=e; i++){
+    cout << arr[i] << " " ;
+  }cout << endl;
+}
+
+bool binarySearch(int arr[], int s, int e, int key){
+  cout << endl;
+  printBS(arr, s, e);
+  
+  //basecase for element not found
+  if(s>e){
+    return false;
+  }
+
+  int mid = s + (e-s)/2;
+  cout << "value of mid element " << arr[mid] << endl;
+  // base case for element found
+  if (arr[mid] == key){
+    return true;
+  }
+
+  if(arr[mid] < key){
+    return binarySearch(arr, mid+1, e, key);
+  }
+  else{
+    return binarySearch(arr, s, mid-1, key);
+  }
+}
+
 int main(){
-  int arr[6] = {12,42,6,29,11,14};
-  int size = 6;
-  int key = 9;
+  int arr[11] = {2,4,6,10,14,18,22,38,49,55,222};
+  int size = 11;
+  int key = 222;
+  
   //if(sortedArray(arr, 6)){
   //  cout << "Sorted " << endl;
   //}else{
@@ -58,11 +89,20 @@ int main(){
   //}
   //int ans = sumArr(arr, 6);
   //cout << "Sum is " << ans << endl;
+  
   cout << endl;
-  bool ans = linearSearch(arr, size, key);
-  if(ans){
-    cout << "Present" <<endl;
-  }else{
-    cout << "Not Present" << endl;
+  //bool ans = linearSearch(arr, size, key);
+  //if(ans){
+  //  cout << "Present" <<endl;
+  //}else{
+  //  cout << "Not Present" << endl;
+  //}
+
+  if (binarySearch(arr, 0, 10, key)){
+    cout << "Present" << endl;
+  }
+  else{
+    cout << "Not present" << endl;
+
   }
 }
