@@ -1,0 +1,75 @@
+OOPS 4 Pillars
+
+1. ENCAPSULATION
+  Wrapping of data members and functions into single entity 
+  is called encapsulation.
+  Fully encapsulated class = All data members are marked 
+  private. It can be explained as information hiding.
+  Advantages:
+  1. Hiding data, so security is high.
+  2. If we want, we can make class read only.
+  3. Code reusability
+  4. Unit testing
+
+2. INHERITANCE  
+  Using properties and functions of one class to reuse the 
+  code is called inheritance.
+
+  Parent/Super Class : Class whose properties are 
+  being inherited.
+  Child/Sub class : Class who inherits properties.
+
+  Syntax: class child_className : access_specifier parent_className
+
+  Base class    Public      Protected   Private
+
+  Public        Public      Protected   Private
+  Protected     Protected   Protected   Private
+  Private       No Access   No Access   No Access
+
+  Types:
+  1. Single : Class A inherits properties of class B.
+  2. Multi-Level : A inherits properties of B. B inherits 
+    properties of C. 
+  3. Multiple : Class A inherits properties of B and C.
+  4. Hybrid : Combination of more than one type of inheritance.
+  5. Hierarichal : One class serve as parent class for more
+    than one class.
+
+  Inheritance Ambiguity: When functions in different inherited 
+  classes have same name.
+  This problem can be solved using scope resolution operator.
+
+3. POLYMORPHISM 
+  Existing in many forms.
+  It has two Types
+  1. Compile Time - Also called static polymorphism
+  Further two Types
+    1. Function Overloading - When two functions are of the same 
+      name, it is called function overloading.
+      If return type is changed, functions cannot be overloaded.
+      If we have to do function overloading, then we have to do 
+      changes in input argument. Either no of argument or type of 
+      argument.
+    2. Operator Overloading - When we define a function on a certain
+      operator which is different from its usual behavior, then it is 
+      called operator overloading.
+  2. Run Time - Also called dynamic polymorphism 
+    1. Method overriding: 
+      Rules: 
+      1. Method of parent class and method of the child class must
+      have same name.
+      2. method of parent class and method of child class must have
+      the same parameters.
+      3. It is possible through inheritance only.
+
+4. ABSTRACTION
+  It can be defined a implementation hiding. It means to show
+  only essential information and hiding the rest.
+  You can use acccess modifiers, through which you decide what 
+  to show and what to hide, to implement abstraction.
+  Advantages: 
+  1. Increases code reusability
+  2. Avoids duplication
+  3. Only you can make changes to your data
+  4. High security

@@ -1,0 +1,139 @@
+OOPS Lecture
+
+1. What is object oriented programming? 
+  It is a type of programming technique in which things work 
+  around a object. 
+
+2. What is object?
+  It is a type of entity, which have two things. State or property
+  and behavior. we want to relate our programme to real world 
+  entities to increase readability, manageability, extensibility
+  of our programme. 
+  Object is an instance of class.
+  Example: 
+
+3. What is a class?
+  This is a user defined data type. Class is also a type of template.
+
+  Empty class - class with no property. In empty class, the object
+  will get 1 byte.
+  Class can be defined explicitly and imported wherever required using
+  #include in the header file.
+
+4. Access property/data members
+  We can Access property using dot operator.
+
+5. Access Modifiers
+  1. Private : Any property written under private can be accessed
+    in the class only.
+  2. Public : Any property written under public, can be accessed
+    anywhere, inside or outside the class.
+  3. Protected : Similar to private. Can be accessed inside the class
+    but not outside the class. But child class can access it.
+  By default, access modifier is private.
+
+6. Getter and setter functions
+  Getter function is used to read the private data members 
+  and setter function is used to apply conditions or give value 
+  on/to the data members.
+
+7. Data structure alignment
+  It is the way data is arranged and accessed in computer memory.
+  It consist of three separate but related issues: data alignment,
+  data structure Padding and packing.
+
+8. Data alignment
+  It is aligning of data according to their natural alignment.
+  Data alignment means putting the data in memory at an address 
+  equal to some multiple of the word size. This increases the 
+  performance of the system due to the way the CPU handles memory.
+  
+  A memory access is said to be aligned when the data being 
+  accessed is n bytes long and the datum address is n-byte aligned. 
+  When a memory access is not aligned, it is said to be misaligned. 
+  Note that by definition byte memory accesses are always aligned.
+
+9. Data Structure Padding 
+  It is a concept in C that adds the one or more empty bytes 
+  between the memory addresses to align the data in memory.
+
+  Now, to align the data, it may be necessary to insert some 
+  extra bytes between the end of the last data structure and 
+  the start of the next data structure as the data is placed 
+  in memory as multiples of fixed word size. This insertion 
+  of extra bytes of memory to align the data is called data 
+  structure padding.
+
+  The processor doesn't read 1 byte in one CPU cycle. It reads 1 
+  word at a time. It either reads 4 bytes(in 32 bit processor) or 8 
+  bytes (in 64-bit processor). So if in a CPU cycle, a word does 
+  complete then it's fine but if it doesn't, then the word is 
+  shifted to be read in another CPU cycle and empty space is 
+  created there. It is an in-built proceess that is automatically 
+  done by the compiler.
+
+10. Constructor
+  Whenever you create an object, a constructor is called.
+  It is invoked on the time of object creation and it doesn't 
+  have any return type. It also doesn't have any input parameter.
+  
+  A default constructor is a function with same name as of class
+  with no parameters. If we explicitly specify our default constructor,
+  then the inbuilt constructor will be removed automatically.
+
+  Parameterized constructor is a constructor with parameters. 
+  this keyword - It is a pointer which stors the address of the 
+  current object. 
+  Parameterized constructors donot work without default constructor.
+
+11. Copy constructor
+   When we write a class, a in-built copy constructor is generated
+   automatically.
+   We can write our copy constructor.
+
+12. Shallow and deep copy
+  default copy constructor does shallow copy.
+  Shallow copy is when data is refering to the same address in memory.
+  explicitly specified copy constructor does deep copy.
+  In deep copy, entirely different copy is made for the same datamember.
+  
+13. Copy assignment operator
+  for Example
+  Hero a(10,'C')
+  Hero b(20, 'B')
+  a=b 
+  Here = is the copy assignment operator.
+
+14. Destructor
+  It is used to deallocate the memory.As your objects becomes out of scope,
+  then Destructor is called and it free the memory. 
+  It has name same as class.
+  No return type.
+  No parameters.
+  Destructor wil be created automatically at time of class creation.
+  But we can create is explicitly too.
+  Constructor and Destructor differs by the ~ sign.
+  The object you form by static allocation , for them Destructor is 
+  called automatically.
+  For the objects formed dynamically, we have to manually call the 
+  Destructor.
+  Destructor is called once for each element during its 
+  destruction time.
+
+15. Const keyword
+16. Initilization list
+
+17. Static keyword
+  It create such type of data membets which belongs to class,but 
+  donot need object to access it.
+  First step is to initialise which is done outside of the class.
+  Syntax : datatype className :: fieldName = value;
+  :: is the scope resolution operator.
+
+  It can also be accessed through objects, but is not recommended 
+  because it doesnt belong to object, it belongs to your class.
+
+18. Static function 
+  No need to create an object, you can simply call it using class name.
+  It doesn't have this keyword, because this keyword is pointer to current
+  object but here there is no object. It can only access static member.
